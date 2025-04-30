@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "BE_Productos.Controllers.EmployeeController",
+    "Method": "ListEmpleados",
+    "RelativePath": "api/Employee/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE_Productos.Controllers.ProductController",
+    "Method": "ListProducts",
+    "RelativePath": "api/Product/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
