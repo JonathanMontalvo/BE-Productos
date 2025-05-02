@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|c:\\users\\johnn\\desktop\\proyecto_productos\\be-productos\\be-productos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|solutionrelative:be-productos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|c:\\users\\johnn\\desktop\\proyecto_productos\\be-productos\\be-productos\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|solutionrelative:be-productos\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|c:\\users\\johnn\\desktop\\proyecto_productos\\be-productos\\be-productos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|solutionrelative:be-productos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|c:\\users\\johnn\\desktop\\proyecto_productos\\be-productos\\be-productos\\models\\dto\\ordercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|c:\\users\\johnn\\desktop\\proyecto_productos\\be-productos\\be-productos\\models\\dto\\ordergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|solutionrelative:be-productos\\models\\dto\\ordergetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|c:\\users\\johnn\\desktop\\proyecto_productos\\be-productos\\be-productos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E7EBB4D-4BBA-4BE2-BB44-38F4BF0C484C}|BE-Productos\\BE-Productos.csproj|solutionrelative:be-productos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\appsettings.json",
+              "RelativeDocumentMoniker": "BE-Productos\\appsettings.json",
+              "ToolTip": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\appsettings.json",
+              "RelativeToolTip": "BE-Productos\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-02T05:29:45.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "OrderGetDTO.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\Models\\DTO\\OrderGetDTO.cs",
               "RelativeDocumentMoniker": "BE-Productos\\Models\\DTO\\OrderGetDTO.cs",
@@ -38,12 +55,11 @@
               "RelativeToolTip": "BE-Productos\\Models\\DTO\\OrderGetDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T23:55:29.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-01T23:55:29.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "OrderCreateDTO.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\Models\\DTO\\OrderCreateDTO.cs",
               "RelativeDocumentMoniker": "BE-Productos\\Models\\DTO\\OrderCreateDTO.cs",
@@ -51,31 +67,30 @@
               "RelativeToolTip": "BE-Productos\\Models\\DTO\\OrderCreateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T23:55:25.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-01T23:55:25.333Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "BE-Productos\\Controllers\\OrderController.cs",
               "ToolTip": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\Controllers\\OrderController.cs",
               "RelativeToolTip": "BE-Productos\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAqwJ0AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAqwJ0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T23:10:31.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\Program.cs",
               "RelativeDocumentMoniker": "BE-Productos\\Program.cs",
               "ToolTip": "C:\\Users\\johnn\\Desktop\\Proyecto_Productos\\BE-Productos\\BE-Productos\\Program.cs",
               "RelativeToolTip": "BE-Productos\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAiwCYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAiwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T03:19:32.581Z",
               "EditorCaption": ""

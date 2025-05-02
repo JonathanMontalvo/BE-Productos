@@ -140,7 +140,6 @@ C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\ne
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BE-Productos.props
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BE-Productos.props
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\BE-Produ.4740C51C.Up2Date
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\BE-Productos.dll
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\refint\BE-Productos.dll
@@ -148,3 +147,4 @@ C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\ne
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\BE-Productos.genruntimeconfig.cache
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\ref\BE-Productos.dll
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\BE-Productos.sourcelink.json
+C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
