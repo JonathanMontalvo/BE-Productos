@@ -18,9 +18,11 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 });
 
 // DI Repositories
-builder.Services.AddScoped<IOrdersProductRepository, OrdersProductRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IOrdersProductRepository, OrdersProductRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 // Cors
 builder.Services.AddCors(options => options.AddPolicy("AllowWebapp",
@@ -30,6 +32,12 @@ builder.Services.AddCors(options => options.AddPolicy("AllowWebapp",
 
 // Automapper
 builder.Services.AddAutoMapper(typeof(Program));
+
+// Configuración de referencia cíclica para poder usar los Icollections de las entidades
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
 
 var app = builder.Build();
 

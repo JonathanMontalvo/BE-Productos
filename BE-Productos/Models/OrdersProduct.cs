@@ -13,6 +13,8 @@ public partial class OrdersProduct
 
     public int Quantity { get; set; }
 
+    public bool Active { get; set; }
+
     public virtual Order Order { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;

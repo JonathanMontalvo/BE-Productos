@@ -21,22 +21,33 @@ namespace BE_Productos.Repository
 
         public async Task DeleteEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            var deleteEmployee = await _context.Employees.FindAsync(employee.Id);
+            if (deleteEmployee != null)
+            {
+                deleteEmployee.Active = false;
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<Employee> GetEmployee(int id)
         {
-            return await _context.Employees.FindAsync(id);
+            return await _context.Employees.Where(employee => ((employee.Id == id) && employee.Active)).FirstOrDefaultAsync();
         }
 
         public async Task<List<Employee>> GetListEmployees()
         {
-            return await _context.Employees.ToListAsync();
+            return await _context.Employees.Where(employee => employee.Active).ToListAsync();
         }
 
         public async Task UpdateEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            var updateEmployee = await _context.Employees.FindAsync(employee.Id);
+            if (updateEmployee != null)
+            {
+                updateEmployee.Name = employee.Name;
+                updateEmployee.Lastname = employee.Lastname;
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

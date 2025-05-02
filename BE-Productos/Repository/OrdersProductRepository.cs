@@ -12,29 +12,40 @@ namespace BE_Productos.Repository
             _context = context;
         }
 
-        public Task<OrdersProduct> AddOrdersProduct(OrdersProduct ordersProduct)
+        public async Task DeleteOrdersProduct(OrdersProduct ordersProduct)
         {
-            throw new NotImplementedException();
+            var deleteOrdersProduct = await _context.OrdersProducts.FindAsync(ordersProduct.Id);
+            if (deleteOrdersProduct != null)
+            {
+                deleteOrdersProduct.Active = false;
+                await _context.SaveChangesAsync();
+            }
         }
 
-        public Task DeleteOrdersProduct(OrdersProduct ordersProduct)
+        public async Task<List<OrdersProduct>> GetListOrdersProduct()
         {
-            throw new NotImplementedException();
+            return await _context.OrdersProducts.Where(ordersProduct => ordersProduct.Active)
+                .Include(ordersProduct => ordersProduct.Product)
+                .ToListAsync();
         }
 
-        public Task<List<OrdersProduct>> GetListOrdersProduct()
+        public async Task<OrdersProduct> GetOrdersProductr(int id)
         {
-            throw new NotImplementedException();
+            return await _context.OrdersProducts.Where(ordersProduct => ((ordersProduct.Id == id) && ordersProduct.Active))
+                .Include(ordersProduct => ordersProduct.Product)
+                .FirstOrDefaultAsync();
         }
 
-        public Task<OrdersProduct> GetOrdersProductr(int id)
+        public async Task UpdateOrdersProduct(OrdersProduct ordersProduct)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateOrdersProduct(OrdersProduct ordersProduct)
-        {
-            throw new NotImplementedException();
+            var updateOrdersProduct = await _context.OrdersProducts.FindAsync(ordersProduct.Id);
+            if (updateOrdersProduct != null)
+            {
+                updateOrdersProduct.OrderId = ordersProduct.OrderId;
+                updateOrdersProduct.ProductId = ordersProduct.ProductId;
+                updateOrdersProduct.Quantity = ordersProduct.Quantity;
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

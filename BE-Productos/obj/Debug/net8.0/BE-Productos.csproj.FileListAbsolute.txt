@@ -147,3 +147,4 @@ C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\ne
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\BE-Productos.pdb
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\BE-Productos.genruntimeconfig.cache
 C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\ref\BE-Productos.dll
+C:\Users\johnn\Desktop\Proyecto_Productos\BE-Productos\BE-Productos\obj\Debug\net8.0\BE-Productos.sourcelink.json

@@ -20,22 +20,34 @@ namespace BE_Productos.Repository
 
         public async Task DeleteProduct(Product product)
         {
-            throw new NotImplementedException();
+            var deleteProduct = await _context.Products.FindAsync(product.Id);
+            if (deleteProduct != null)
+            {
+                deleteProduct.Active = false;
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<List<Product>> GetListProducts()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Products.Where(product => product.Active).ToListAsync();
         }
 
         public async Task<Product> GetProduct(int id)
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Products.Where(product => ((product.Id == id) && product.Active)).FirstOrDefaultAsync();
         }
 
         public async Task UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            var updateProduct = await _context.Products.FindAsync(product.Id);
+            if (updateProduct != null)
+            {
+                updateProduct.Name = product.Name;
+                updateProduct.Price = product.Price;
+                updateProduct.CategoryId = product.CategoryId;
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

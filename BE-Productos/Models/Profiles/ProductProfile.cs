@@ -8,6 +8,7 @@ namespace BE_Productos.Models.Profiles
         public ProductProfile() {
             CreateMap<Product, ProductDTO>();
             CreateMap<ProductDTO, Product>();
+
         }
     }
 }
