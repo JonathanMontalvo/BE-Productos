@@ -26,7 +26,7 @@ namespace BE_Productos.Controllers
             try
             {
                 var products = await _productRepository.GetListProducts();
-                var productsDto = _mapper.Map<List<ProductDTO>>(products);
+                var productsDto = _mapper.Map<List<ProductGetDTO>>(products);
                 return Ok(productsDto);
             }
             catch (Exception ex)
@@ -41,7 +41,7 @@ namespace BE_Productos.Controllers
             try
             {
                 var product = await _productRepository.GetProduct(id);
-                var productDto = _mapper.Map<ProductDTO>(product);
+                var productDto = _mapper.Map<ProductGetDTO>(product);
                 if (product == null)
                 {
                     return NotFound($"There is no product with the ID: {id}");

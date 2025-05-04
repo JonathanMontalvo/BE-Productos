@@ -40,13 +40,13 @@ namespace BE_Productos.Controllers
         {
             try
             {
-                var ordersProduct = await _ordersProductRepository.GetOrdersProductr(id);
-                if (ordersProduct == null)
+                var ordersProducts = await _ordersProductRepository.GetOrdersProduct(id);
+                if (ordersProducts == null)
                 {
-                    return NotFound($"There is no order product with the ID: {id}");
+                    return NotFound($"There is no orders with the Order ID: {id}");
                 }
-                var ordersProductDto = _mapper.Map<OrdersProductGetDTO>(ordersProduct);
-                return Ok(ordersProductDto);
+                var ordersProductsDto = _mapper.Map<List<OrdersProductGetDTO>>(ordersProducts);
+                return Ok(ordersProductsDto);
             }
             catch (Exception ex)
             {

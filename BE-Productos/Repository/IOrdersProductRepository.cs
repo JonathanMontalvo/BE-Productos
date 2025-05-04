@@ -5,7 +5,7 @@ namespace BE_Productos.Repository
     public interface IOrdersProductRepository
     {
         Task<List<OrdersProduct>> GetListOrdersProduct();
-        Task<OrdersProduct> GetOrdersProductr(int id);
+        Task<List<OrdersProduct>> GetOrdersProduct(int id);
         Task UpdateOrdersProduct(OrdersProduct ordersProduct);
         Task DeleteOrdersProduct(OrdersProduct ordersProduct);
     }

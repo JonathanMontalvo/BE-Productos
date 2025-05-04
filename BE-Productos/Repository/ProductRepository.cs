@@ -30,12 +30,16 @@ namespace BE_Productos.Repository
 
         public async Task<List<Product>> GetListProducts()
         {
-            return await _context.Products.Where(product => product.Active).ToListAsync();
+            return await _context.Products.Where(product => product.Active)
+                .Include(product => product.Category)
+                .ToListAsync();
         }
 
         public async Task<Product> GetProduct(int id)
         {
-            return await _context.Products.Where(product => ((product.Id == id) && product.Active)).FirstOrDefaultAsync();
+            return await _context.Products.Where(product => ((product.Id == id) && product.Active))
+                .Include(product => product.Category)
+                .FirstOrDefaultAsync();
         }
 
         public async Task UpdateProduct(Product product)

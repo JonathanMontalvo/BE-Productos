@@ -29,11 +29,11 @@ namespace BE_Productos.Repository
                 .ToListAsync();
         }
 
-        public async Task<OrdersProduct> GetOrdersProductr(int id)
+        public async Task<List<OrdersProduct>> GetOrdersProduct(int id)
         {
-            return await _context.OrdersProducts.Where(ordersProduct => ((ordersProduct.Id == id) && ordersProduct.Active))
+            return await _context.OrdersProducts.Where(ordersProduct => ((ordersProduct.OrderId == id) && ordersProduct.Active))
                 .Include(ordersProduct => ordersProduct.Product)
-                .FirstOrDefaultAsync();
+                .ToListAsync();
         }
 
         public async Task UpdateOrdersProduct(OrdersProduct ordersProduct)

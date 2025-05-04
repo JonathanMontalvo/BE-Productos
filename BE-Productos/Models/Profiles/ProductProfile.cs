@@ -8,6 +8,8 @@ namespace BE_Productos.Models.Profiles
         public ProductProfile() {
             CreateMap<Product, ProductDTO>();
             CreateMap<ProductDTO, Product>();
+            CreateMap<Product, ProductGetDTO>()
+                .ForMember(destiny => destiny.Category, options => options.MapFrom(source => source.Category));
 
         }
     }
