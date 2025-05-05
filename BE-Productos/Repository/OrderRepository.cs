@@ -58,18 +58,50 @@ namespace BE_Productos.Repository
         {
             return await _context.Orders.Where(order => ((order.Id == id) && order.Active))
                 .Include(order => order.Employee)
-                .Include(order => order.OrdersProducts)
+                .Include(order => order.OrdersProducts.Where(op => op.Active))
                 .ThenInclude(ordersProduct => ordersProduct.Product)
                 .FirstOrDefaultAsync();
         }
 
         public async Task UpdateOrder(Order order)
         {
-            var updateOrder = await _context.Orders.FindAsync(order.Id);
+            var updateOrder = await _context.Orders.Where(or => ((or.Id == order.Id) && or.Active))
+                .Include(o => o.OrdersProducts.Where(op => op.Active)) // Incluye la lista de productos relacionados
+                .FirstOrDefaultAsync();
             if (updateOrder != null)
             {
+                Console.WriteLine("PAse el if\n");
                 updateOrder.EmployeeId = order.EmployeeId;
                 updateOrder.Total = order.Total;
+
+                // Actualizar lista de OrdersProducts
+                foreach (var existingOrderProduct in updateOrder.OrdersProducts)
+                {
+                    var updatedProduct = order.OrdersProducts.FirstOrDefault(op => op.ProductId == existingOrderProduct.ProductId);
+                    if (updatedProduct != null)
+                    {
+                        existingOrderProduct.Quantity = updatedProduct.Quantity;
+                        existingOrderProduct.Active = updatedProduct.Active;
+                    }
+                    else
+                    {
+                        existingOrderProduct.Active = false; // Marcar como inactivo si no está en la nueva lista
+                    }
+                }
+
+                foreach (var newOrderProduct in order.OrdersProducts)
+                {
+                    if (!updateOrder.OrdersProducts.Any(op => op.ProductId == newOrderProduct.ProductId))
+                    {
+                        updateOrder.OrdersProducts.Add(new OrdersProduct
+                        {
+                            ProductId = newOrderProduct.ProductId,
+                            Quantity = newOrderProduct.Quantity,
+                            Active = true
+                        });
+                    }
+                }
+
                 await _context.SaveChangesAsync();
             }
         }

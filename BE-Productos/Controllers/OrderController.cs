@@ -163,5 +163,56 @@ namespace BE_Productos.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateOrder(int id, OrderCreateDTO orderDto)
+        {
+            try
+            {
+                if (id != orderDto.Id || orderDto.Total <= 0 || orderDto.OrdersProducts == null)
+                {
+                    return BadRequest("Some fields have incorrect values");
+                }
+
+                var existingOrder = await _orderRepository.GetOrder(id);
+                if (existingOrder == null)
+                {
+                    return NotFound($"There is no order with the ID: {id}");
+                }
+
+                if (existingOrder.Active == false)
+                {
+                    return BadRequest($"The product with ID: {id} is inactive");
+                }
+
+                foreach (var product in orderDto.OrdersProducts)
+                {
+                    if (product.Quantity <= 0)
+                    {
+                        return BadRequest("Some products have incorrect quantities");
+                    }
+                }
+                var order = new Order
+                {
+                    Id = orderDto.Id,
+                    EmployeeId = orderDto.EmployeeId,
+                    Total = orderDto.Total,
+                    // Creamos una lista de objetos OrdersProduct a partir de la lista de productos del DTO con linq
+                    OrdersProducts = orderDto.OrdersProducts.Select(orderProduct => new OrdersProduct
+                    {
+                        ProductId = orderProduct.ProductId,
+                        Quantity = orderProduct.Quantity,
+                        Active = true
+                    }).ToList()
+                };
+
+                await _orderRepository.UpdateOrder(order);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
